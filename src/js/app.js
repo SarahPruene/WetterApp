@@ -183,4 +183,4 @@ function showCelsiusTemp(event) {
     }
   }
 //search
-search()
+search('London')
