@@ -170,7 +170,7 @@ function showCelsiusTemp(event) {
       <h3 class="forecast-title">
         ${formatHours(forecast.dt * 1000)}
       </h3>
-      <img class="forecast-icon" src="img/png/${forecast.weather[0].description}.png" alt="${
+      <img class="forecast-icon" rel="stylesheet" src="img/png/${forecast.weather[0].description}.png" alt="${
         forecast.weather[0].description
       }" />
       <div class="weather-forecast-temp">
