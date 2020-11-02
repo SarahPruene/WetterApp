@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wetter App</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Bootstramp -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <!-- Link to css  -->
+    <link rel="stylesheet" href="src/styles/css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="wetter-app">
+        <!-- weather-app body -->
+        <div class="wetter-app__wrapper">
+          <!-- form field start -->
+          <form id="form" class="form">
+            <input
+              type="search"
+              name="search-city"
+              id="search-city"
+              class="search-city"
+              autocomplete="off"
+            />
+            <button type="submit" class="btn btn-submit-search">
+              <img
+                src="https://img.icons8.com/cotton/64/000000/search--v1.png"
+              />
+            </button>
+          </form>
+
+          <!-- form field end -->
+
+          <!-- Current weather location  -->
+          <div class="current">
+            <div class="current-locationTime">
+              <h1 class="current-location"></h1>
+              <p class="current-time"></p>
+              <p class="current-description"></p>
+            </div>
+            <div class="current-weather">
+              <img src="img/png/broken clouds.png" alt="wetter-icon" class="icons" />
+              <span class="current-temp">
+                <strong class="temperature"></strong>
+                <span class="units">
+                  <a href="#" class="celsius active" id="celsius-link">°C</a>|
+                  <a href="#" class="fahrenheit" id="fahrenheit-link">°F</a>
+                </span>
+              </span>
+            </div>
+            <div class="current-details">
+              <div class="cont">
+                <div class="det-inf">Humitity:</div>
+                <div class="det-info"><span class="humidity"></span>%</div>
+              </div>
+              <div class="cont">
+                <div class="det-inf">Wind:</div>
+                <div class="det-info"><span class="wind"></span>km/h</div>
+              </div>
+              <div class="cont">
+              <button class="btn-current-location"> Current Location</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Forecast  -->
+          <div class="weather-forecast" id="forecast">
+          </div>
+          <!-- Forecast -->
+        </div>
+        <!-- creditional -->
+      </div>
+    </div>
+    <script src="src/js/app.js"></script>
+  </body>
+</html>
