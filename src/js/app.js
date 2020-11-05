@@ -41,14 +41,14 @@ function currentGeoLocation(event) {
 }
 
 function searchLocation(position) {
-  const lat = position.coords.latitude
-  const lon = position.coords.longitude
+  const lat = position.coords.latitude;
+  const lon = position.coords.longitude;
+  let apiKey = "94d5f2539167e3ce89a6d05f892abf09";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayCityAndTemp);
 
-  let apiKey = '94d5f2539167e3ce89a6d05f892abf09'
-
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
-
-  axios.get(apiUrl).then(displayCityAndTemp)
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayDate() {
